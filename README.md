@@ -1,7 +1,7 @@
 # Handmade Game in C and X11
 
 ## About
-This project is my personal follow-along of **Handmade Hero**, but adapted for **Linux + X11**.  
+This project is my personal follow-along of [**Handmade Hero**](https://youtube.com/playlist?list=PLnuhp3Xd9PYTt6svyQPyRO_AAuMWGxPzU&si=JGpl7qMlpWR0ufVa), but adapted for **Linux + X11**.  
 The goal is to master:
 - **C programming** (low-level memory, structs, pointers, compilation)
 - **X11 programming** (creating windows, handling input, drawing pixels)
