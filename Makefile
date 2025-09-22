@@ -1,7 +1,7 @@
 BUILD_DIR := build
 BINARY    := game
 CC        := gcc
-CFLAGS    := -Wall -Wextra -O2
+CFLAGS    := -std=c99 -Wall -Wextra -O2 -Iinclude
 LIBS      := -lX11
 
 SRCS := $(wildcard src/*.c)
@@ -21,6 +21,8 @@ run: $(BUILD_DIR)/$(BINARY)
 
 clean:
 	rm -rf $(BUILD_DIR)
+
+rebuild: clean $(BUILD_DIR)/$(BINARY)
 
 .PHONY: all clean
 

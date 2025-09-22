@@ -1,13 +1,16 @@
 #include <X11/Xlib.h>
-#include <stdio.h>
 #include <string.h>
+
+#include "ulog.h"
 
 int main(void)
 {
+    ulog_setup();
+
     Display* dpy = XOpenDisplay(NULL);
     if (!dpy)
     {
-        fprintf(stderr, "Cannot open display\n");
+        log_error("Cannot open display\n");
         return 1;
     }
 
@@ -28,6 +31,7 @@ int main(void)
     XSetForeground(dpy, gc, white);
 
     XMapWindow(dpy, win);
+    log_info("Showing window on the screen");
 
     for (;;)
     {
