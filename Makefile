@@ -16,6 +16,9 @@ $(BUILD_DIR)/%.o: src/%.c
 	mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+run: $(BUILD_DIR)/$(BINARY)
+	./$(BUILD_DIR)/$(BINARY)
+
 clean:
 	rm -rf $(BUILD_DIR)
 
